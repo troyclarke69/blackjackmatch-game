@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Unkempt:wght@400;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html {
+    font-family: 'Unkempt', cursive;
+    /* font-family:'Trebuchet MS', sans-serif; */
+    font-weight: bold;
+    padding: 1em;
+    background-color: rgba(20,30,40,.9);
+    /* height: 100vh; */
+
+    /* this does not work on phone */
+    /* margin: 0 5rem; */
+
+}
+
+/* @media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  } */
+
+  @media only screen and (min-width: 600px) {
+    body {
+        margin: 0 25rem;
+    }
+  }
+
+  @media only screen and (min-width: 600px) {
+    .card {
+        height: 5rem;
+    }
+  }
+
+/* @media screen (max-width: 375px) {
+    body{
+        margin: 0 5rem;
+    }
+} */
+
+button {
+    display: inline-block;
+    width: 65px;
+    padding: .5em;
+    margin: 2px;
+    background-color: rgba(150,10,10,1);
+    color: white;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+small {
+    margin-left: 1em;
+    font-size: .75em;
+    color: #d4d4d4;
+    text-shadow: 2px 2px 3px #2d2d2d;
+    letter-spacing: 3px;
+}
+
+.dashboard {
+    background: radial-gradient(rgba(200,200,200, 1), rgba(200,200,200, .4));
+    border: none;
+    border-radius: 10px;
+    margin: 0em 1em;
+}
+
+.header {
+    text-align: center;
+    text-shadow: 1px 1px 1px #f8f8f8;
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: rgba(150,10,10,1);
+    padding: 5px;
+}
+
+.message {
+    text-align: center;
+    text-shadow: 1px 1px 1px #4b4b4b;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: yellow;
+    /* height: 2em; */
+}
+
+.controls {
+    text-align: center;
+}
+
+.attempts {
+    text-align: center;
+    color: navy;
+    margin-bottom: .5em;
+
+}
+
+.container {
+    /* background-color: rgba(144, 122, 214, .75); */
+    background: radial-gradient(rgba(200,200,200, 1), rgba(200,200,200, .6));
+    font-weight: bold;
+    font-family: Baloo, sans-serif;
+    font-size: 2rem;
+    padding: 5px;
+    border-radius: 5px;
+    /* height: 70vh; */
+
+    /* margin: 0 5rem; */
+}
+
+.card {
+   
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px black;
+    height: 2.5em;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    /* transform: translateY(100px);   */
+    /* transform: skew(20deg);   */
+    /* animation: moveDown 1s; */
+    /* animation: shake 2s infinite; */
+    /* animation: shake 1s;
+    animation-direction: alternate; */
+}
+
+.selected {
+    background-color: rgba(20,30,40,.8);
+    color: white;
+    transition: transform 0.1s;
+    transform-style: preserve-3d;
+    transform: rotateY(360deg);
+    /* animation: shake 1s; */
+    /* animation-direction: alternate; */
+}
+
+.disabled {
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: black;
+    color: yellow;
+    opacity: .25;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.bolded {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.hidden {
+    color: rgba(144, 122, 214, .1);
+}
+
+.flex {
+    border: 2px solid rgba(144, 122, 214, 1);;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+  }
+  
+  .flex > div {
+    /* flex: 1 1 200px; */
+    flex: 1 0 21%;
+    /* flex: 1 0 11%; */
+    /* flex: 1 0 15%; */
+    margin: 5px;
+  }
+
+  @keyframes moveDown {
+    0% {
+        /* transform: translateY(-100px); */
+        transform: translateX(-250px);
+        /* transform: rotate(0deg); */
+      }
+      100% {
+        /* transform: translateY(0); */
+        transform: translateX(0);
+        /* transform: rotate(360deg); */
+
+      }
+}
+
+@keyframes shake {
+    0% {
+      /* transform: skewY(45deg); */
+      transform: translateY(90deg);
+    }
+    100% {
+      /* transform: skewY(-45deg); */
+      transform: translateY(-90deg);
+
+    }
+  }
+
+
+
+  /* alt to .flex > div (?) */
+/* NOTE: inline-block does not add a line-break after the element*/
+/* .child {
+    display: inline-block; 
+    background: blue;
+    margin: 10px 0 0 2%;
+    flex-grow: 1;
+    height: 100px;
+    width: calc(100% * (1/4) - 10px - 1px);
+} */
